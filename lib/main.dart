@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:tictactoe_game/core/routes/routes.dart';
+import 'package:tictactoe_game/core/utils/constants.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,13 +12,24 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+    return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
+      title: 'Tic Tac Toe Game',
+      theme: ThemeData.dark(
         useMaterial3: true,
+      ).copyWith(
+        scaffoldBackgroundColor: bgColor,
+        colorScheme: const ColorScheme.dark().copyWith(
+          primary: Colors.white,
+          secondary: secondaryColor,
+        ),
+        textTheme:
+            GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme.apply(
+                  bodyColor: Colors.white,
+                  displayColor: Colors.white,
+                )),
       ),
-      home: const Text('TicTacToe Game'),
+      routerConfig: router,
     );
   }
 }
