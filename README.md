@@ -20,9 +20,9 @@ This is a real-time multiplayer TicTacToe game built with Flutter for the fronte
 - Winner announcement
 
 ## Installation
-```sh
-   git clone https://github.com/Yiheyistm/tictactoe_game.git
-    ```
+   ```sh
+    git clone https://github.com/Yiheyistm/tictactoe_game.git
+   ```
 
 ### Prerequisites
 
