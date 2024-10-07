@@ -4,9 +4,13 @@ import 'package:tictactoe_game/core/utils/constants.dart';
 class CustomTextField extends StatefulWidget {
   final String hintText;
   final TextEditingController controller;
+  final bool readOnly;
 
   const CustomTextField(
-      {super.key, required this.hintText, required this.controller});
+      {super.key,
+      required this.hintText,
+      required this.controller,
+      this.readOnly = false});
 
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
@@ -30,6 +34,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
       ),
       child: TextField(
         controller: widget.controller,
+        readOnly: widget.readOnly,
+        onTapOutside: (value) => FocusScope.of(context).unfocus(),
         decoration: InputDecoration(
           hintText: widget.hintText,
           fillColor: bgColor,

@@ -14,8 +14,10 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
+    
     return Container(
       width: width,
+      height: 50,
       margin: const EdgeInsets.symmetric(vertical: defaultPadding / 2),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
@@ -25,7 +27,7 @@ class CustomButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           maximumSize: Size(width, 50),
           elevation: 0,
-          backgroundColor: primaryColor,
+          backgroundColor: Colors.transparent,  
         ),
         onPressed: onPressed,
         child: Text(

@@ -1,5 +1,8 @@
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+import 'package:tictactoe_game/core/provider/room_provider.dart';
 import 'package:tictactoe_game/core/routes/routes.dart';
 import 'package:tictactoe_game/core/utils/constants.dart';
 
@@ -12,24 +15,27 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      debugShowCheckedModeBanner: false,
-      title: 'Tic Tac Toe Game',
-      theme: ThemeData.dark(
-        useMaterial3: true,
-      ).copyWith(
-        scaffoldBackgroundColor: bgColor,
-        colorScheme: const ColorScheme.dark().copyWith(
-          primary: Colors.white,
-          secondary: secondaryColor,
+    return ChangeNotifierProvider(
+      create: (_) => RoomDataProvider(),
+      child: MaterialApp.router(
+        debugShowCheckedModeBanner: false,
+        title: 'Tic Tac Toe Game',
+        theme: ThemeData.dark(
+          useMaterial3: true,
+        ).copyWith(
+          scaffoldBackgroundColor: bgColor,
+          colorScheme: const ColorScheme.dark().copyWith(
+            primary: Colors.white,
+            secondary: secondaryColor,
+          ),
+          textTheme:
+              GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme.apply(
+                    bodyColor: Colors.white,
+                    displayColor: Colors.white,
+                  )),
         ),
-        textTheme:
-            GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme.apply(
-                  bodyColor: Colors.white,
-                  displayColor: Colors.white,
-                )),
+        routerConfig: router,
       ),
-      routerConfig: router,
     );
   }
 }
