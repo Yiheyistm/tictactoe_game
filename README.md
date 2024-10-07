@@ -20,6 +20,9 @@ This is a real-time multiplayer TicTacToe game built with Flutter for the fronte
 - Winner announcement
 
 ## Installation
+```sh
+   git clone https://github.com/Yiheyistm/tictactoe_game.git
+    ```
 
 ### Prerequisites
 
@@ -81,9 +84,9 @@ This is a real-time multiplayer TicTacToe game built with Flutter for the fronte
 4. Start playing the game.
 
 ## Demo Images
-![menu]('./demo_image/menu.png')
-![Create Room]('./demo_image/create_room.png')
-![Join Room]('./demo_image/join_game.png')
-![Winner]('./demo_image/winner.png')
+![menu](demo_image/menu.png)
+![Create Room](demo_image/create_room.png)
+![Join Room](demo_image/join_game.png)
+![Winner](demo_image/winner.png)
 
 Feel free to modify the content as per your project's specifics.
