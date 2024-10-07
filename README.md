@@ -63,14 +63,15 @@ This is a real-time multiplayer TicTacToe game built with Flutter for the fronte
     ```sh
     cd ../../../../../../tictactoe_game
     ```
+2. Go to `lib/services/socket_client_services.dart` and change Your local ip address `final String _url = 'http://192.168.x.x:3000'`.
 
-2. Get the Flutter dependencies:
+3. Get the Flutter dependencies:
 
     ```sh
     flutter pub get
     ```
 
-3. Run the app:
+4. Run the app:
 
     ```sh
     flutter run
