@@ -1,11 +1,15 @@
 // ignore_for_file: library_prefixes
 
-import 'package:get_ip_address/get_ip_address.dart';
-import 'package:socket_io_client/socket_io_client.dart' as IO;
 import 'dart:developer' as developer show log;
 
+import 'package:get_ip_address/get_ip_address.dart';
+import 'package:socket_io_client/socket_io_client.dart' as IO;
+
 class SocketClientServices {
-  final String _url = 'http://192.168.50.121:3000';
+  final String _url =
+      'http://192.168.50.121:3000'; // Replace with your server URL
+  // final String _url = 'http://localhost:3000'; // Replace with your server URL
+  // final String _url = 'http://<your-server-ip>:3000'; // Replace with your server URL
   static final SocketClientServices _instance =
       SocketClientServices._internal();
   IO.Socket? socket;
